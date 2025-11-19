@@ -1,0 +1,139 @@
+/* מובייל קטן */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* טאבלט */
+@media screen and (max-width: 1199px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* מסך גדול */
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+
+.calculator {
+  width: 35rem;
+  height: 60rem;
+  background: #000;
+  border-radius: 5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.result {
+  flex: 1;  
+  background: #000;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  display: block; 
+  text-align: right;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
+/*.result {
+  flex: 1;  
+  background: #000;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow-x: auto; 
+  overflow-y: hidden;
+  scrollbar-width: none; 
+}
+*/
+
+.result span {
+  color: #fff;
+  font-size: 5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  text-align: right;
+  display: inline-block;
+  min-width: 100%;
+  width: max-content;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.keys button {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  width: 100%;
+  font-size: 2.4rem;
+  border-radius: 50%;
+}
+
+.keys .actionTop {
+  background: #a5a5a5;
+  color: #000;
+}
+
+.keys .operator {
+  background: #ff9f0a;
+  color: #fff;
+  font-weight: 600;
+}
+
+.keys .num {
+  background: #505050;
+  color: #fff;
+}
+
+.keys button.zero {
+  grid-column: span 2;
+  border-radius: 4rem;
+  justify-content: center;
+  aspect-ratio: auto;
+}
+
+.keys button:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+.keys button:active {
+  transform: scale(0.95);
+  filter: brightness(0.9);
+}
